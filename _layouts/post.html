@@ -1,0 +1,86 @@
+{% include /header-page.html %}
+
+{% include /top-line.html %}
+
+    <section class="page-header overlay">
+        <div class="page-header-content">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <a href="{{ page.image }}"><img src="img/thumbnails/dummy-image-375x211.gif" alt="{{ page.description }}" class="lazy img-responsive overlay img-width" data-srcset="{{ page.image }}"></a>
+
+                        <div class="page-header-meta">
+
+                            <a href="{{ site.category_dir }}/{{ page.categories }}" class="page-category-link">{{ page.catname }}</a>
+                            <span class="date">{{ page.date | date: '%d' }}/{{ page.date | date: '%m' }}/{{ page.date | date: '%Y' }}</span>
+
+                            <h1>{{ page.title }}</h1>
+
+                            <div class="item-social">
+                                <div class="item-comments" title="Количество комментариев">
+                                    <i class="fa fa-comment"></i><a href="{{ page.url }}#disqus_thread" class="item-comments-count"></a>
+                                </div>
+                                <div class="fa fa-share-alt" title="Поделиться в соц. сетях"></div>
+                                <div class="likely likely-custom" data-url="{{ site.url }}{{ page.url }}" data-media="{{ page.thumb }}" data-title="{{ page.title }}">
+                                    <div class="vkontakte" title="Поделиться Вконтакте">Вконтакте</div>
+                                    <div class="facebook" title="Поделиться в Facebook">Facebook</div>
+                                    <div class="twitter" title="Поделиться в Twitter">Twitter</div>
+                                    <div><a href="{{ page.image }}">Открыть фото</a></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="article-content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-8">
+                    <article class="main-article">
+
+                        <nav class="breadcrumbs">
+                            <ul>
+                                <li><a href="{{ site.baseurl }}">Главная</a></li>
+                                <li><a href="{{ site.category_dir }}/{{ page.categories }}">{{ page.catname }}</a></li>
+                                <li class="active">{{ page.title }}</li>
+                            </ul>
+                        </nav>
+
+                        <div class="article-body">
+    
+                            {{ content }}
+    
+                        </div>
+
+                        <div class="comments">
+{% include /comments.html %}
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <aside class="main-aside">
+
+{% include /last-articles.html %}
+
+                    </aside>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% include /footer.html %}

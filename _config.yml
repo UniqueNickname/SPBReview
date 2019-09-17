@@ -1,0 +1,30 @@
+title: SPBReview - веб-альбом Санкт-Петербурга
+name: SPBReview
+description: Обзор на город Санкт-Петербург, его улицы, достопримечательности, музеи, людей, всё, чем живёт культурная столица России
+
+themecolor: '#202225'
+imagehome: img/spbreview.jpg
+baseurl: "/"
+url: "https://spbreview.github.io/"
+github_username:  spbreview
+
+plugins: [jekyll-paginate-v2]
+category_dir: blog
+pagination:
+  enabled: true
+  per_page: 9
+  title: ':title - Страница :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
+exclude: ['node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/_custom.js', 'js/_lazy.js', 'js/_prognroll.js', 'npm-debug.log', '**/Thumbs.db', 'sass', '**/*.DS_Store']
+
+soc:
+  <li><a href="https://vk.com/dark_king_13"><i class="fa fa-vk"></i></a></li>
+  <li><a href="https://www.instagram.com/architect13_7/"><i class="fa fa-instagram"></i></a></li>
+
+copyright: Копирование контента и размещение на других сайтах запрещено.

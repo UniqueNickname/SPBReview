@@ -1,0 +1,77 @@
+<div class="latest-box">
+
+	<div class="lb-header">Последние статьи:</div>
+
+	<div class="lb-list">
+
+		<div class="lb-item">
+			<a href="blog/sity/" class="lb-catname">Город</a>
+			<div class="lb-body">
+
+				{% for post in site.categories.sity limit: 1 offset: 0 %}
+				<a class="lb-item-header" href="{{ post.url }}">{{ post.title }}</a>
+				<div class="lb-footer">
+					<div class="item-comments" title="Количество комментариев">
+						<i class="fa fa-comment"></i><a class="item-comments-count" href="{{post.url}}#disqus_thread"></a>
+						<span class="date">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+
+		<div class="lb-item">
+			<a href="blog/museums/" class="lb-catname">Музеи</a>
+			<div class="lb-body">
+
+				{% for post in site.categories.museums limit: 1 offset: 0 %}
+				<a class="lb-item-header" href="{{ post.url }}">{{ post.title }}</a>
+				<div class="lb-footer">
+					<div class="item-comments" title="Количество комментариев">
+						<i class="fa fa-comment"></i><a class="item-comments-count" href="{{post.url}}#disqus_thread"></a>
+						<span class="date">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+
+		<div class="lb-item">
+			<a href="blog/people/" class="lb-catname">Люди</a>
+			<div class="lb-body">
+
+				{% for post in site.categories.people limit: 1 offset: 0 %}
+				<a class="lb-item-header" href="{{ post.url }}">{{ post.title }}</a>
+				<div class="lb-footer">
+					<div class="item-comments" title="Количество комментариев">
+						<i class="fa fa-comment"></i><a class="item-comments-count" href="{{post.url}}#disqus_thread"></a>
+						<span class="date">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+
+		<div class="lb-item">
+			<a href="blog/video/" class="lb-catname">Видео</a>
+			<div class="lb-body">
+
+				{% for post in site.categories.video limit: 1 offset: 0 %}
+				<a class="lb-item-header" href="{{ post.url }}">{{ post.title }}</a>
+				<div class="lb-footer">
+					<div class="item-comments" title="Количество комментариев">
+						<i class="fa fa-comment"></i><a class="item-comments-count" href="{{post.url}}#disqus_thread"></a>
+						<span class="date">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+		
+	</div>
+
+</div>

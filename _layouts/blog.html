@@ -1,0 +1,62 @@
+{% include /header-category.html %}
+
+{% include /top-line.html %}
+
+    <div class="cat-list">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    <div class="all-posts-header">{{ page.title }}</div>
+
+                    <div class="cat-list-wrap">
+
+{% for post in paginator.posts %}
+{% include /category-list-item.html %}
+{% endfor %}
+
+                    <!-- <div class="row no-gutters">
+                            
+{% for post in paginator.posts %}
+{% include /home-first-section-item-one.html %}
+{% endfor %}
+
+                    </div> -->
+
+                        <!-- <a href="#" class="cat-list-item">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="pattern">
+                                        <img src="img/thumbnails/dummy-image-375x211.gif" alt="Петербургская архитектура" class="lazy img-responsive overlay" data-srcset="img/@1x/City_3_preview.jpg">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h3>Петербургская архитектура</h3>
+                                    <div class="date">06/07/2019</div>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum sint non, eveniet molestias odit necessitatibus debitis quia dolor vero velit dolores soluta quo deleniti molestiae quae architecto, mollitia magnam repellat.
+                                    </p>
+                                </div>
+                            </div>
+                        </a> -->
+
+                    </div>
+
+                    {% include /pagination-first.html %}
+
+                </div>
+
+                <div class="col-md-4">
+
+{% include /category-aside.html %}
+
+                </div>
+
+            </div>
+        </div>
+
+{% include /pagination-second.html %}
+
+    </div>
+
+{% include /footer.html %}

@@ -1,0 +1,40 @@
+{% include /header-category.html %}
+
+{% include /top-line.html %}
+
+    <div class="pattern pattern-cat-header">
+        <div class="cat-header header-about">
+            <div class="cat-header-block">
+                <h1>О сайте {{ site.name }}.ru</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-8">
+                    <div class="main-article">
+
+                        <div class="article-body">
+                            <p>Обзор на город Санкт-Петербург, его улицы, достопримечательности, музеи, людей, всё, чем живёт культурная столица России.</p>
+                            <p>Сайт {{ site.name }}.ru создал студент ОмГТУ группы ИСТ-171 Кочура Иван в ходе прохождения производственной практики летом 2019 года.</p>
+                            <p>Данный сайт позволяет пользователям просматривать фотографии и видео, созданные в ходе прохождения производственной практики, комменировать, оценивать и делиться ими в социальных сетях.</p>
+                            <p>Копирование контента и размещение на других сайтах запрещено.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+
+{% include /last-articles.html %}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% include /footer.html %}

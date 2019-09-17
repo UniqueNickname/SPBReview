@@ -1,0 +1,15 @@
+<section class="first-section clearfix">
+    <div class="container-fluid">
+        <div class="row no-gutters">
+
+{% for post in site.categories.sity limit: 2 offset: 0 %}
+{% include /home-first-section-item-one.html %}
+{% endfor %}
+
+{% for post in site.categories.sity limit: 3 offset: 2 %}
+{% include /home-first-section-item-two.html %}
+{% endfor %}
+                
+        </div>
+    </div>
+</section>
